@@ -21,4 +21,5 @@ This repo contains code and assets for Phase 1 of ECHO
   - A reference implementation for DialogFlow publisher (code)
 [python jupyter notebook] publisher module that configures intents, custom entities, etc in a DialogFlow agent using DialogFlow APIs
 
+More information in [this document](https://docs.google.com/document/d/1ET5_dLdHV3XcRqm536eUhUCZi5D6i1kb_ExeV83EbBc/edit#heading=h.q8utft8j2ho4).
 
