@@ -1,0 +1,230 @@
+"C - I am looking to purchase a new family plan.
+CS - Sounds great, what kind of plan are you looking for? 
+C - I need a voice plan only.","SELECT dim_product.product_key, dim_product.name, dim_product.description, dim_product.product_type, dim_product.product_category FROM dim_product WHERE dim_product.name = 'family plan' and dim_product.product_category = 'voice plans'"
+"C - I would like to purchase a new voice plan.
+CS - I can help you find the right plan, is this just for you?
+C - No, do you have family voice plans available?","SELECT dim_product.product_key, dim_product.name, dim_product.description, dim_product.product_type, dim_product.product_category FROM dim_product WHERE dim_product.name = 'family plan' and dim_product.product_category = 'voice plans'"
+"C - I need a new family plan. Do you guys sell family plans?
+CS - Sure, what kind of service are you looking to buy?
+C - I need a voice plan.","SELECT dim_product.product_key, dim_product.name, dim_product.description, dim_product.product_type, dim_product.product_category FROM dim_product WHERE dim_product.name = 'family plan' and dim_product.product_category = 'voice plans'"
+"C - I am looking to switch to your service.
+CS - That's great we would love to bring you on board. What service are you interested in?
+C - I would like a voice plan.
+CS - Ok great, we have many different voice plans. How many people do you need on the plan?
+C - My whole family needs to be on it, do you have plans that cover entire families?","SELECT dim_product.product_key, dim_product.name, dim_product.description, dim_product.product_type, dim_product.product_category FROM dim_product WHERE dim_product.name = 'family plan' and dim_product.product_category = 'voice plans'"
+C - I want to get a family voice plan. Do you guys sell plans in that category?,"SELECT dim_product.product_key, dim_product.name, dim_product.description, dim_product.product_type, dim_product.product_category FROM dim_product WHERE dim_product.name = 'family plan' and dim_product.product_category = 'voice plans'"
+"C - I need to go to a store for help immediately. Which store is in my area?
+CS - I can search for the one closest to you. Where are you located?
+C - I'm located in San Francisco.","SELECT dim_store.store_name, dim_store.city FROM dim_store WHERE dim_store.city = 'San Francisco'"
+C - I need to go into one of the retail locations. Can you tell me of any San Francisco stores?,"SELECT dim_store.store_name, dim_store.city FROM dim_store WHERE dim_store.city = 'San Francisco'"
+"C - I need to find the store closest to me
+CS - Sure, what city or town are you located in? I can find stores in that area.
+C - I'm in San Francisco
+CS - You said San Francisco right?
+C - Yes, San Francisco.","SELECT dim_store.store_name, dim_store.city FROM dim_store WHERE dim_store.city = 'San Francisco'"
+"C - Which stores are there near me?
+CS - Let me find that for you. Where are you located?
+C - In San Francisco.
+CS - Sorry, I missed that, which city are you located in?
+C - San Francisco.
+CS - Ah okay, San Francisco. Let me look.","SELECT dim_store.store_name, dim_store.city FROM dim_store WHERE dim_store.city = 'San Francisco'"
+"C - I need to visit a store tomorrow. Which one can I go to?
+CS - Let me look that up for you. What city do you live in?
+C - I live in San Francisco.","SELECT dim_store.store_name, dim_store.city FROM dim_store WHERE dim_store.city = 'San Francisco'"
+"C - How many retail locations do you guys have?
+CS - Which city are you referring to?
+C - In San Francisco?
+CS - I'd just like to confirm, you said San Francisco, correct?
+C - Yeah, San Francisco, California.",SELECT COUNT(DISTINCT(dim_store.store_number)) FROM dim_store WHERE dim_store.city = 'San Francisco'
+"C - I want to know you retail location count.
+CS - Sure are you looking for a particular area?
+C - How many are there in San Francisco?",SELECT COUNT(DISTINCT(dim_store.store_number)) FROM dim_store WHERE dim_store.city = 'San Francisco'
+"C - How many stores are there in my area?
+CS - Which area are you in?
+C - I'm in San Francisco.",SELECT COUNT(DISTINCT(dim_store.store_number)) FROM dim_store WHERE dim_store.city = 'San Francisco'
+"C - I'd like to know the number of stores that are nearby.
+CS - I can find that, just let me know where you live.
+C - I live in San Francisco.",SELECT COUNT(DISTINCT(dim_store.store_number)) FROM dim_store WHERE dim_store.city = 'San Francisco'
+"C - How many store locations are there in my city?
+CS - Which city are you in?
+C - San Francisco.
+CS - I think we got cut off. Which city is it?
+C - San Francisco.
+CS - Okay, looking in San Francisco.",SELECT COUNT(DISTINCT(dim_store.store_number)) FROM dim_store WHERE dim_store.city = 'San Francisco'
+"C - I just saw that you guys are kicking off a promotion. It was advertised on a billboard I passed by. What type of promotion is it?
+CS - We have a semi-annual promotion starting soon. Is this the promotion you are referring to?
+C - Yes, what offers are you giving for the semi-annual promotion?",SELECT dim_promotion.promotion_type FROM dim_promotion WHERE dim_promotion.promotion_name = 'Semi-annual'
+"C - Can you give me details of the semi annual promotion going on?
+CS - Sure, what would you like to know about it?
+C - What kind of discount is being offered?
+CS - You want to know what type of discount we are offering?
+C - Yes.",SELECT dim_promotion.promotion_type FROM dim_promotion WHERE dim_promotion.promotion_name = 'Semi-annual'
+"C - I drove by a billboard advertising a promotion. Do you know what kind of discount it is for?
+CS - Let me look into that for you. Do you know what kind of promotion it was advertising?
+C - I think I recall it was a semi - annual sale.
+CS - Okay so I'm looking for the type of discount on our semi-annual promotion, right?
+C - Yes, exactly.",SELECT dim_promotion.promotion_type FROM dim_promotion WHERE dim_promotion.promotion_name = 'Semi-annual'
+"C - Is there a semi annual promotion going on?
+CS - There is one coming up, but hasn't started yet.
+C - What kind of promotion is being offered?",SELECT dim_promotion.promotion_type FROM dim_promotion WHERE dim_promotion.promotion_name = 'Semi-annual'
+"C - Do you guys have a promotion going on? I saw one on a billboard.
+CS - We have a semi annual sale starting soon.
+C - What discount can I get from the promotion?",SELECT dim_promotion.promotion_type FROM dim_promotion WHERE dim_promotion.promotion_name = 'Semi-annual'
+"C - Hi there, can you send me all of the orders for John Smith?
+CS - Sure, is it okay if I just pull the orders for the past 30 days?
+C - Sure that's fine.
+CS - You said the name is John Smith right?
+C - Yes, John Smith.","SELECT fact_product_sales.order_id, SUM(fact_product_sales.quantity), ROUND(SUM(fact_product_sales.sales_cost),2) FROM fact_product_sales
+JOIN dim_date ON fact_product_sales.date_key = dim_date.date_key
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE dim_customer.name = 'John Smith' AND dim_date.date > DATE_SUB(CURRENT_DATE(), INTERVAL(30, 'DAY'))
+GROUP BY fact_product_sales.order_id"
+"C - I need all of my orders for the last 30 days.
+CS - Coming right up. What is your name?
+C - My name is John Smith.
+CS - Is that Smith spelled S-M-I-T-H?
+C - Yes, that is correct.","SELECT fact_product_sales.order_id, SUM(fact_product_sales.quantity), ROUND(SUM(fact_product_sales.sales_cost),2) FROM fact_product_sales
+JOIN dim_date ON fact_product_sales.date_key = dim_date.date_key
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE dim_customer.name = 'John Smith' AND dim_date.date> DATE_SUB(CURRENT_DATE(), INTERVAL(30, 'DAY'))
+GROUP BY fact_product_sales.order_id"
+"C - Get me my last few orders.
+CS - Sure, I can pull up your orders from the past 30 days, is that okay?
+C - Yeah, that's fine.
+CS - What is your full name so I can pull up the orders?
+C - My name is John Smith.","SELECT fact_product_sales.order_id, SUM(fact_product_sales.quantity), ROUND(SUM(fact_product_sales.sales_cost),2) FROM fact_product_sales
+JOIN dim_date ON fact_product_sales.date_key = dim_date.date_key
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE dim_customer.name = 'John Smith' AND dim_date.date> DATE_SUB(CURRENT_DATE(), INTERVAL(30, 'DAY'))
+GROUP BY fact_product_sales.order_id"
+"C - I need to pull up all of my recent orders.
+CS - I can help you with that. What is your first and last name?
+C - Name is John Smith.
+CS - Ok great, I can pull the past 30 days, does that work?
+C - Yep that's perfect.
+CS - How do you spell Smith?
+C - S-M-I-T-H.
+CS - Got it, thank you.","SELECT fact_product_sales.order_id, SUM(fact_product_sales.quantity), ROUND(SUM(fact_product_sales.sales_cost),2) FROM fact_product_sales
+JOIN dim_date ON fact_product_sales.date_key = dim_date.date_key
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE dim_customer.name = 'John Smith' AND dim_date.date> DATE_SUB(CURRENT_DATE(), INTERVAL(30, 'DAY'))
+GROUP BY fact_product_sales.order_id"
+"C - I need to see my last orders. Can you lookup my account?
+CS - Sure, what is your full name? I can search your account this way.
+C - My name is John Smith.
+CS - Ok great, I can pull your orders from the past 30 days, is that okay?
+C - Sounds great.","SELECT fact_product_sales.order_id, SUM(fact_product_sales.quantity), ROUND(SUM(fact_product_sales.sales_cost),2) FROM fact_product_sales
+JOIN dim_date ON fact_product_sales.date_key = dim_date.date_key
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE dim_customer.name = 'John Smith' AND dim_date.date> DATE_SUB(CURRENT_DATE(), INTERVAL(30, 'DAY'))
+GROUP BY fact_product_sales.order_id"
+"C - I want to purchase an iPad Pro.
+CS - Great, I can help you with that. Which color do you want to purchase?
+C - What colors does it come in?",SELECT dim_product.color FROM dim_product WHERE dim_product.name = 'ipad pro'
+"C - Can you give me details about the iPad Pro.
+CS - Sure what would you like to know about it? 
+C - I guess to start, which colors are available?",SELECT dim_product.color FROM dim_product WHERE dim_product.name = 'ipad pro'
+"C - I want to buy an Apple product. Which colors does it come in?
+CS - Different products come in different colors. Which product are you interested in?
+C - Possibly the iPad Pro.
+CS - I can find the colors, you said the Pro right? The iPad Pro?
+C - Yeah, the iPad Pro please.",SELECT dim_product.color FROM dim_product WHERE dim_product.name = 'ipad pro'
+"C - I'm thinking about purchasing an iPad Pro. What colors does it come in?
+CS - Let me look for you - you are inquiring about the iPad Pro right?
+C - Yes, the iPad Pro.",SELECT dim_product.color FROM dim_product WHERE dim_product.name = 'ipad pro'
+"C - I want to buy an iPad, does it come in any other colors than silver?
+CS - Which type of iPad are you looking at? We have iPad Pros, iPad minis, etc.
+C - What colors does the iPad Pro come in?",SELECT dim_product.color FROM dim_product WHERE dim_product.name = 'ipad pro'
+"C - Can someone help me find the number you have on file for me?
+CS - I can help you with that. What is the email associated with your account?
+C - The email is abc@gmail.com",SELECT dim_customer.phone_number FROM dim_customer WHERE dim_customer.email_address = 'abc@gmail.com'
+"C - What phone number do you guys have for my account?
+CS - Let me pull up your account. What is the email associated with the account?
+C - abc@gmail.com
+CS - Ok, is that acb@gmail.com?
+C - No, it is a b c @gmail.com.",SELECT dim_customer.phone_number FROM dim_customer WHERE dim_customer.email_address = 'abc@gmail.com'
+"C - Can you lookup up the phone number for my account? My email is abc@gmail.com
+CS - Let me look that up for you. What did you say your email was once more?
+C - It's a b c @gmail.",SELECT dim_customer.phone_number FROM dim_customer WHERE dim_customer.email_address = 'abc@gmail.com'
+"C - I need to know which phone number is on file for my account. I think you guys have the wrong number.
+CS - I can find that for you. Which email did you use to signup?
+C - My email is abc@gmail.com
+CS - Can you please spell out your email?
+C - Yeah, that's A as in apple, B as in bear, C as in Charlie, @gmail.com.",SELECT dim_customer.phone_number FROM dim_customer WHERE dim_customer.email_address = 'abc@gmail.com'
+"C - I need to know which phone number you have stored.
+CS - Sure, I just need to pull up your account. What is email did you sign up with?
+C - I think I used abc@gmail.com
+CS - Can you spell out your email for me?
+C - A b c @gmail.",SELECT dim_customer.phone_number FROM dim_customer WHERE dim_customer.email_address = 'abc@gmail.com'
+"C - I am looking to purchase a phone plan.
+CS - That's awesome! I can help you find the one that is right for you. Are there any features you are looking for?
+C - I would like 10GB of service monthly, how much are the 10GB plans?",SELECT dim_product.unit_price FROM dim_product WHERE dim_product.name = '10GB plan'
+"C - I want a new phone plan but need to know how much it will be first.
+CS - I can give you a quote. What kind of phone plan are you looking for?
+C - I would like to have 10GB. How much are 10GB plans?",SELECT dim_product.unit_price FROM dim_product WHERE dim_product.name = '10GB plan'
+"C - How much are your phone plans?
+CS - We have many types of plans, is there a specific one that you are interested in?
+C - Yes, the 10GB plan?
+CS - 10 gigabit? Let me look for you.",SELECT dim_product.unit_price FROM dim_product WHERE dim_product.name = '10GB plan'
+"C - How much are new phone plans?
+CS - It depends on the plan you purchase. What kinds of features are you looking for? I can find prices for plans that include the features.
+C - I want a plan that includes 10GB.",SELECT dim_product.unit_price FROM dim_product WHERE dim_product.name = '10GB plan'
+"C - I would like to purchase a phone plan.
+CS - Great, I can help you with that! Which plan are you interested in?
+C - Hmm, how much are your 10GB plans?
+CS - You are inquiring about the 10 gigabit plans?
+C - Yes please.",SELECT dim_product.unit_price FROM dim_product WHERE dim_product.name = '10GB plan'
+"C - I can't remember which address my order is shipping to.
+CS - I can help you with that. Do you know your order id?
+C - Yes it is 1234.
+CS - 1-2-3-5?
+C - No, 1-2-3-4.
+CS - Oh 1-2-3-4. Ok, I got it.","SELECT dim_customer.address1, dim_customer.city, dim_customer.state, dim_customer.zipcode, dim_customer.country FROM fact_product_sales
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE fact_product_sales.order_id = 1234"
+"C - I need to know where you are shipping my order to.
+CS - I can look that up for you. What is your order number?
+C - My order number is 1234.","SELECT dim_customer.address1, dim_customer.city, dim_customer.state, dim_customer.zipcode, dim_customer.country FROM fact_product_sales
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE fact_product_sales.order_id = 1234"
+"C - Which shipping address do you have on file for order?
+CS - Let me pull up the order. Do you have an order number?
+C - Yest the number is 1234.","SELECT dim_customer.address1, dim_customer.city, dim_customer.state, dim_customer.zipcode, dim_customer.country FROM fact_product_sales
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE fact_product_sales.order_id = 1234"
+"C - I think I might have given the wrong address on my order. Can I check on my order's address?
+CS - Sure is this for a billing or shipping address?
+C - It's for shipping.
+CS - Ok great. I'll just need your order number. Do you have that accessible?
+C - Yes, my order number is 1234.
+CS - You said 1-2-3-4 right?
+C - Yes, that's correct.","SELECT dim_customer.address1, dim_customer.city, dim_customer.state, dim_customer.zipcode, dim_customer.country FROM fact_product_sales
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE fact_product_sales.order_id = 1234"
+"C - I haven't found my package yet. Which address was it shipped to?
+CS - Do you have your order ID so I can lookup your order?
+C - Sure my order id is 1234.
+CS Can you repeat your order number?
+C - Yes, it's 1-2-3-4.
+CS - Thank you I've got it.","SELECT dim_customer.address1, dim_customer.city, dim_customer.state, dim_customer.zipcode, dim_customer.country FROM fact_product_sales
+JOIN dim_customer ON fact_product_sales.customer_key = dim_customer.customer_key
+WHERE fact_product_sales.order_id = 1234"
+"C - How much did you guys bill me on my last order?
+CS - Let me find that for you. Do you have an order id that I can search?
+C - Yes, the number is 1234.",SELECT SUM(fact_product_sales.sales_cost) FROM fact_product_sales WHERE fact_product_sales.order_id = 1234
+"C - I need to check on the total for my last order to compare to my credit card bill.
+CS - I can find that total for you. I'll just need your order numebr.
+C - My order number is 1234.
+CS - Okay, reading back your confirmation number. It is 1-2-3-4, right?
+C - Yes, that's correct.",SELECT SUM(fact_product_sales.sales_cost) FROM fact_product_sales WHERE fact_product_sales.order_id = 1234
+"C - I can't find my confirmation. How much was I billed on my order?
+CS - I can find that for you. Do you have the number for the order?
+C - Yeah the number is 1234.",SELECT SUM(fact_product_sales.sales_cost) FROM fact_product_sales WHERE fact_product_sales.order_id = 1234
+"C - How much did my last order cost? For tax and everything too.
+CS - I can look up that order. What is the order number?
+C - It's order 1234.",SELECT SUM(fact_product_sales.sales_cost) FROM fact_product_sales WHERE fact_product_sales.order_id = 1234
+"C - I just want to check on how much was billed on my last oder.
+CS - Of course, do you have your order number?
+C - Where can I find that?
+CS - On your order confirmation email, there should be a number at the top of the email.
+C - Oh, it is number 1234.",SELECT SUM(fact_product_sales.sales_cost) FROM fact_product_sales WHERE fact_product_sales.order_id = 1234

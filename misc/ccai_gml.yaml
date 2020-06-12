@@ -1,0 +1,2196 @@
+created: 2020-06-05
+model:
+  created: '2020-01-22'
+  id: retail_63
+  name: retail_63
+  type: gnn_bert
+  updated: '2020-01-22'
+  url: s3://got-it-ai-model-bucket/dev/retail_demo.tar.gz
+organization_name: gotitai
+query_generator:
+  columns:
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: customer_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 100000000
+    rule: int_range
+    table: dim_customer
+    where_operators: []
+  - aggregations:
+    - count
+    allow_group_by: true
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: true
+    column: customer_id
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 100000000
+    rule: int_range
+    table: dim_customer
+    where_operators: []
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: false
+    column: account_number
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 100000000
+    rule: int_range
+    table: dim_customer
+    where_operators: []
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: city
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - San Francisco
+    - Boston
+    - Cambridge
+    - Los Angeles
+    - Seattle
+    - Las Vegas
+    - Atlanta
+    - Miami
+    - New York City
+    - Chicago
+    - Kansas
+    rule: enum
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: state
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - CA
+    - MA
+    - IL
+    - WA
+    - FL
+    - NY
+    - NV
+    - MI
+    - GA
+    rule: enum
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: country
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - USA
+    rule: enum
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: date_registered
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 2015-01-01 00:00:00
+    - 2019-12-31 00:00:00
+    rule: date_range
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: preferred_channel1
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - store
+    - online
+    rule: enum
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: interest1
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - iphone 7
+    - iphone 8
+    - iphone XS
+    - iphone 11
+    - iphone 11 pro
+    - ipad
+    - ipad pro
+    - 10GB plan
+    - unlimited plan
+    - family plan
+    - earphones
+    - iphone cover
+    - screen protector
+    rule: enum
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: name
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - "Trudy Meldrum \xCA"
+    - "Jarred Wiers \xCA"
+    - "Josephine Riggie \xCA"
+    - "Lindsey Sullen \xCA"
+    - "Judi Manigo \xCA"
+    - "Nicholas Devera \xCA"
+    - "Lucila Byrns \xCA"
+    - "Yee Mcdougall \xCA"
+    - "Devon Beckmann \xCA"
+    - "Essie Fetterman \xCA"
+    - "Doyle Jury \xCA"
+    - "Chante Aceves \xCA"
+    - "Keely Cheatam \xCA"
+    - "Frederica Ross \xCA"
+    - "Susanne Mickles \xCA"
+    - "Willy Paulos \xCA"
+    - "Osvaldo Winzer \xCA"
+    - "Jerica Schwartzman \xCA"
+    - "Stewart Foskey \xCA"
+    - "Elijah Laudenslager \xCA"
+    rule: enum
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: channel
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - SEM
+    - SEO
+    - Email
+    - SMS
+    - direct
+    rule: enum
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: true
+    column: phone_number
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 3000000000
+    - 9999999999
+    rule: int_range
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: true
+    column: email_address
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - abc@gmail.com
+    - xyz@yahoo.com
+    - pqrs@hotmail.com
+    rule: enum
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: true
+    column: Address1
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 123 Primrose Rd
+    - 345 4th Street
+    - 23 5th Avenue
+    rule: enum
+    table: dim_customer
+    where_operators: []
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: true
+    column: zipcode
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - '5'
+    rule: int_rand
+    table: dim_customer
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: date_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 10000
+    rule: int_range
+    table: dim_date
+    where_operators: []
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: date
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 2015-01-01 00:00:00
+    - 2019-12-31 00:00:00
+    rule: date_range
+    table: dim_date
+    where_operators:
+    - '='
+    - between
+    - '>='
+    - <=
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: day
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 30
+    rule: int_range
+    table: dim_date
+    where_operators: []
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: day_of_the_week
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 7
+    rule: int_range
+    table: dim_date
+    where_operators:
+    - '='
+    - between
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: day_name
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+    rule: enum
+    table: dim_date
+    where_operators: []
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: day_of_the_year
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 365
+    rule: int_range
+    table: dim_date
+    where_operators: []
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: week_number
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 52
+    rule: int_range
+    table: dim_date
+    where_operators:
+    - '='
+    - between
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: month
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 12
+    rule: int_range
+    table: dim_date
+    where_operators:
+    - '='
+    - between
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: month_name
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    rule: enum
+    table: dim_date
+    where_operators: []
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: quarter
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 4
+    rule: int_range
+    table: dim_date
+    where_operators:
+    - '='
+    - between
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: year
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 2017
+    - 2019
+    rule: int_range
+    table: dim_date
+    where_operators:
+    - '='
+    - between
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: week_day
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values: []
+    rule: bool
+    table: dim_date
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: us_holiday
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values: []
+    rule: bool
+    table: dim_date
+    where_operators:
+    - '='
+  - aggregations:
+    - count
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: false
+    column: product_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000000
+    rule: int_range
+    table: dim_product
+    where_operators: []
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: name
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - iphone 7
+    - iphone 8
+    - iphone XS
+    - iphone 11
+    - iphone 11 pro
+    - ipad
+    - ipad pro
+    - 10GB plan
+    - unlimited plan
+    - family plan
+    - earphones
+    - iphone cover
+    - screen protector
+    rule: enum
+    table: dim_product
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: description
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - iphone 7
+    - iphone 8
+    - iphone XS
+    - iphone 11
+    - iphone 11 pro
+    - ipad
+    - ipad pro
+    - 10GB plan
+    - unlimited plan
+    - family plan
+    - earphones
+    - iphone cover
+    - screen protector
+    rule: enum
+    table: dim_product
+    where_operators: []
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: product_type
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - phone
+    - tablets
+    - bundled plans
+    - accessories
+    rule: enum
+    table: dim_product
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: product_category
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - devices
+    - voice plans
+    - internet
+    rule: enum
+    table: dim_product
+    where_operators:
+    - '='
+  - aggregations:
+    - avg
+    - min
+    - max
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: unit_price
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000
+    rule: int_range
+    table: dim_product
+    where_operators:
+    - '='
+    - '>'
+    - <
+    - '>='
+    - <=
+  - aggregations:
+    - avg
+    - min
+    - max
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: unit_cost
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000
+    rule: int_range
+    table: dim_product
+    where_operators:
+    - '='
+    - '>'
+    - <
+    - '>='
+    - <=
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: color
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - black
+    - red
+    - silver
+    - white
+    - gold
+    rule: enum
+    table: dim_product
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: false
+    column: promotion_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000
+    rule: int_range
+    table: dim_promotion
+    where_operators: []
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: promotion_name
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - Christmas
+    - Valentine
+    - Black Friday
+    - July 4
+    - Weekend
+    - Semi-annual
+    rule: enum
+    table: dim_promotion
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: promotion_type
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - discount
+    - buy_one_get_one
+    - multiples
+    rule: enum
+    table: dim_promotion
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: ad_type
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - newspaper
+    - radio
+    - web
+    - billboard
+    - pamphlet
+    - tv
+    rule: enum
+    table: dim_promotion
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: ad_media_name
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - LA time
+    - NY times
+    - Radio 92.3
+    - Facebook
+    - Google ads
+    - CBS
+    - ABC
+    - HBO
+    rule: enum
+    table: dim_promotion
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: store_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000
+    rule: int_range
+    table: dim_store
+    where_operators: []
+  - aggregations:
+    - count
+    allow_group_by: true
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: true
+    column: store_number
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000
+    rule: int_range
+    table: dim_store
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: store_name
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - San Francisco
+    - Boston
+    - Cambridge
+    - Los Angeles
+    - Seattle
+    - Las Vegas
+    - Atlanta
+    - Miami
+    - New York City
+    - Chicago
+    - Kansas
+    rule: enum
+    table: dim_store
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: store_type
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - online
+    - physical
+    rule: enum
+    table: dim_store
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: city
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - San Francisco
+    - Boston
+    - Cambridge
+    - Los Angeles
+    - Seattle
+    - Las Vegas
+    - Atlanta
+    - Miami
+    - New York City
+    - Chicago
+    - Kansas
+    rule: enum
+    table: dim_store
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: state
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - CA
+    - MA
+    - IL
+    - WA
+    - FL
+    - NY
+    - NV
+    - MI
+    - GA
+    rule: enum
+    table: dim_store
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: country
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - USA
+    rule: enum
+    table: dim_store
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: region
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - Northeast
+    - West
+    - Midwest
+    - South
+    rule: enum
+    table: dim_store
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: true
+    column: zipcode
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - '5'
+    rule: int_rand
+    table: dim_store
+    where_operators:
+    - '='
+  - aggregations:
+    - count
+    allow_group_by: true
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: true
+    column: order_id
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 100000000
+    rule: int_range
+    table: fact_product_sales
+    where_operators:
+    - '='
+  - aggregations:
+    - sum
+    - avg
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: quantity
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 100
+    rule: int_range
+    table: fact_product_sales
+    where_operators:
+    - '='
+    - '>'
+    - <
+    - '>='
+    - <=
+  - aggregations:
+    - avg
+    - min
+    - max
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: unit_price
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 0.1
+    - 1000.0
+    rule: float_range
+    table: fact_product_sales
+    where_operators:
+    - '='
+    - '>'
+    - <
+    - '>='
+    - <=
+  - aggregations:
+    - avg
+    - min
+    - max
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: unit_cost
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 0.1
+    - 1000.0
+    rule: float_range
+    table: fact_product_sales
+    where_operators:
+    - '='
+    - '>'
+    - <
+    - '>='
+    - <=
+  - aggregations:
+    - sum
+    - min
+    - max
+    - avg
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: sales_value
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 0.1
+    - 1000.0
+    rule: float_range
+    table: fact_product_sales
+    where_operators:
+    - '='
+    - '>'
+    - <
+    - '>='
+    - <=
+  - aggregations:
+    - sum
+    - min
+    - max
+    - avg
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: sales_cost
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 0.1
+    - 1000.0
+    rule: float_range
+    table: fact_product_sales
+    where_operators:
+    - '='
+    - '>'
+    - <
+    - '>='
+    - <=
+  - aggregations:
+    - sum
+    - min
+    - max
+    - avg
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: true
+    column: margin
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 0.1
+    - 1000.0
+    rule: float_range
+    table: fact_product_sales
+    where_operators:
+    - '='
+    - '>'
+    - <
+    - '>='
+    - <=
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: false
+    column: sales_timestamp
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 2015-01-01 00:00:00
+    - 2019-12-31 23:59:59
+    rule: datetime_range
+    table: fact_product_sales
+    where_operators: []
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: true
+    always_appear_in_where: false
+    appear_in_select: false
+    column: line_number
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000000000
+    rule: int_range
+    table: fact_product_sales
+    where_operators: []
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: date_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 10000
+    rule: int_range
+    table: fact_product_sales
+    where_operators: []
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: customer_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 100000000
+    rule: int_range
+    table: fact_product_sales
+    where_operators: []
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: product_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000000
+    rule: int_range
+    table: fact_product_sales
+    where_operators: []
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: store_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000
+    rule: int_range
+    table: fact_product_sales
+    where_operators: []
+  - aggregations: []
+    allow_group_by: false
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: promotion_key
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values:
+    - 1
+    - 1000
+    rule: int_range
+    table: fact_product_sales
+    where_operators: []
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: clearance_pricing
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values: []
+    rule: boolean
+    table: fact_product_sales
+    where_operators:
+    - '='
+  - aggregations: []
+    allow_group_by: true
+    allow_order_by: false
+    always_appear_in_where: false
+    appear_in_select: false
+    column: returning_customer
+    exclude_fields_in_where_if_false: []
+    exclude_fields_in_where_if_true: []
+    exclude_joins_in_where_if_false: []
+    exclude_joins_in_where_if_true: []
+    exclude_other_fields_in_where: ''
+    like_values: []
+    representative_values: []
+    rule: boolean
+    table: fact_product_sales
+    where_operators:
+    - '='
+  distribution:
+  - rule:
+      distribution: 0.4
+      name: 1 column
+    type: select
+  - rule:
+      distribution: 0.3
+      name: 2 column
+    type: select
+  - rule:
+      distribution: 0.15
+      name: 3 column
+    type: select
+  - rule:
+      distribution: 0.15
+      name: select star
+    type: select
+  - rule:
+      distribution: 0.5
+      name: no join
+    type: join
+  - rule:
+      distribution: 0.5
+      name: 1 join
+    type: join
+  - rule:
+      distribution: 0.15
+      name: no where
+    type: where
+  - rule:
+      distribution: 0.35
+      name: 1 condition
+    type: where
+  - rule:
+      distribution: 0.35
+      name: 2 condition
+    type: where
+  - rule:
+      distribution: 0.15
+      name: 3 condition
+    type: where
+  - rule:
+      distribution: 0.05
+      name: orderby with limit
+    type: orderby
+  - rule:
+      distribution: 0.2
+      name: orderby without limit
+    type: orderby
+  - rule:
+      distribution: 0.75
+      name: no orderby
+    type: orderby
+  - rule:
+      distribution: 0.08
+      name: count
+    type: agg
+  - rule:
+      distribution: 0.08
+      name: sum
+    type: agg
+  - rule:
+      distribution: 0.08
+      name: avg
+    type: agg
+  - rule:
+      distribution: 0.08
+      name: min
+    type: agg
+  - rule:
+      distribution: 0.08
+      name: max
+    type: agg
+  - rule:
+      distribution: 0.5
+      name: no agg
+    type: agg
+  - rule:
+      distribution: 0.7
+      name: no groupby
+    type: groupby
+  - rule:
+      distribution: 0.3
+      name: 1 column
+    type: groupby
+  joins:
+  - join: fact_product_sales.date_key:dim_date.date_key
+    relationship: m:1
+    table: fact_product_sales_dim_date
+  - join: fact_product_sales.product_key:dim_product.product_key
+    relationship: m:1
+    table: fact_product_sales_dim_product
+  - join: fact_product_sales.promotion_key:dim_promotion.promotion_key
+    relationship: m:1
+    table: fact_product_sales_dim_promotion
+  - join: fact_product_sales.store_key:dim_store.store_key
+    relationship: m:1
+    table: fact_product_sales_dim_store
+  - join: fact_product_sales.customer_key:dim_customer.customer_key
+    relationship: m:1
+    table: fact_product_sales_dim_customer
+schema:
+  id: retail_63_with_joins
+  name: retail108_sandbox
+  tables:
+  - columns:
+    - description: Customer key
+      friendly_name: Customer ID
+      is_enum: false
+      key_constraint: primary
+      labels:
+      - Customer ID
+      name: customer_key
+      nullable: false
+      type: INTEGER
+    - description: Customer Id
+      friendly_name: Customer ID
+      is_enum: false
+      key_constraint: unique
+      labels:
+      - Customer ID
+      name: customer_id
+      nullable: false
+      type: INTEGER
+    - description: Account number of the customer
+      friendly_name: Account Number
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Account Number
+      name: account_number
+      nullable: false
+      type: INTEGER
+    - description: City
+      friendly_name: City
+      is_enum: false
+      key_constraint: null
+      labels:
+      - City
+      name: city
+      nullable: false
+      type: STRING
+      system_entity: '@sys.geo-city'
+    - description: State
+      friendly_name: State
+      is_enum: false
+      key_constraint: null
+      labels:
+      - State
+      name: state
+      nullable: false
+      type: STRING
+      system_entity: '@sys.geo-state'
+    - description: Country
+      friendly_name: Country
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Country
+      name: country
+      nullable: false
+      type: STRING
+      system_entity: '@sys.geo-country'
+    - description: date when the customer was registered
+      friendly_name: Registered Date
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Registered Date
+      name: date_registered
+      nullable: false
+      type: DATE
+    - description: preferred channel of purchase for customer (STORE or ONLINE)
+      friendly_name: Preferred Channel
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Preferred Channel
+      name: preferred_channel1
+      nullable: false
+      type: STRING
+    - description: Interest of customer (this data is used to send promotions to customer
+        based on their interest)
+      friendly_name: Interest
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Interest
+      name: interest1
+      nullable: false
+      type: STRING
+    - description: Customer Name
+      friendly_name: Customer Name
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Customer Name
+      name: name
+      nullable: false
+      type: STRING
+      system_entity: '@sys.person'
+    - description: Channel
+      friendly_name: Channel
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Channel
+      name: channel
+      nullable: true
+      type: STRING
+    - description: Phone number
+      friendly_name: Phone number
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Phone number
+      name: phone_number
+      nullable: true
+      type: INTEGER
+      system_entity: '@sys.phone-number'
+    - description: Email
+      friendly_name: Email
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Email
+      name: email_address
+      nullable: true
+      type: STRING
+      system_entity: '@sys.email'
+    - description: Address
+      friendly_name: Address
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Address
+      name: Address1
+      nullable: true
+      type: STRING
+      system_entity: '@sys.address'
+    - description: Zipcode
+      friendly_name: Zipcode
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Zipcode
+      name: zipcode
+      nullable: true
+      type: INTEGER
+      system_entity: '@sys.zip-code'
+    description: ''
+    name: dim_customer
+  - columns:
+    - description: date key.
+      friendly_name: Date ID
+      is_enum: false
+      key_constraint: primary
+      labels:
+      - Date ID
+      name: date_key
+      nullable: false
+      type: INTEGER
+    - description: 'date (Example: 03/15/2019'
+      friendly_name: Date
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Date
+      name: date
+      nullable: false
+      type: DATE
+    - description: 'day part of the date (Example: 15 if the date is 03/15/2019)'
+      friendly_name: Day
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Day
+      name: day
+      nullable: false
+      type: INTEGER
+    - description: day of week (1 = Sunday, 7 = Saturday)
+      friendly_name: Day Of The Week
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Day Of The Week
+      name: day_of_the_week
+      nullable: false
+      type: INTEGER
+    - description: Name of the week day (Sunday, Monday...)
+      friendly_name: Day Name
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Day Name
+      name: day_name
+      nullable: false
+      type: STRING
+    - description: 'Day of year (Example: 33 for Feb 2)'
+      friendly_name: Day Of The Year
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Day Of The Year
+      name: day_of_the_year
+      nullable: false
+      type: INTEGER
+    - description: Week of year (1 to 52)
+      friendly_name: Week Number
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Week Number
+      name: week_number
+      nullable: false
+      type: INTEGER
+    - description: Month number (5 = May)
+      friendly_name: Month Number
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Month Number
+      name: month
+      nullable: false
+      type: INTEGER
+    - description: Month name (January, February)
+      friendly_name: Month
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Month
+      name: month_name
+      nullable: false
+      type: STRING
+    - description: Quarter of year
+      friendly_name: Quarter
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Quarter
+      name: quarter
+      nullable: false
+      type: INTEGER
+    - description: Year
+      friendly_name: Year
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Year
+      name: year
+      nullable: false
+      type: INTEGER
+    - description: 'TRUE if (Mon - Fri)
+
+        FALSE if (Sat-Sun)'
+      friendly_name: Week Day
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Week Day
+      name: week_day
+      nullable: false
+      type: BOOLEAN
+    - description: TRUE if it is a US Holiday. Otherwise False
+      friendly_name: US Holiday
+      is_enum: false
+      key_constraint: null
+      labels:
+      - US Holiday
+      name: us_holiday
+      nullable: false
+      type: BOOLEAN
+    description: ''
+    name: dim_date
+  - columns:
+    - description: product key
+      friendly_name: Product ID
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Product ID
+      name: product_key
+      nullable: false
+      type: INTEGER
+    - description: product name
+      friendly_name: Product Name
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Product Name
+      name: name
+      nullable: false
+      type: STRING
+      synonyms:
+        '10GB': '10GB plan'
+    - description: Description of product
+      friendly_name: Description
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Description
+      name: description
+      nullable: false
+      type: STRING
+    - description: type of product
+      friendly_name: Product Type
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Product Type
+      name: product_type
+      nullable: false
+      type: STRING
+    - description: product category
+      friendly_name: Product Category
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Product Category
+      name: product_category
+      nullable: false
+      type: STRING
+    - description: unit price (please note that the unit price in dim_product table
+        can be different from the unit price in fact_product_sales as it does not
+        include any discounts)
+      friendly_name: Unit Price
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Unit Price
+      name: unit_price
+      nullable: false
+      type: INTEGER
+    - description: unit cost of the product
+      friendly_name: Unit Cost
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Unit Cost
+      name: unit_cost
+      nullable: false
+      type: INTEGER
+    - description: Color
+      friendly_name: Color
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Color
+      name: color
+      nullable: false
+      type: STRING
+    description: ''
+    name: dim_product
+  - columns:
+    - description: promotion key
+      friendly_name: Promotion ID
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Promotion ID
+      name: promotion_key
+      nullable: false
+      type: INTEGER
+    - description: name of the promotion
+      friendly_name: Promotion Name
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Promotion Name
+      name: promotion_name
+      nullable: false
+      type: STRING
+    - description: Type of promotion
+      friendly_name: Promotion Type
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Promotion Type
+      name: promotion_type
+      nullable: false
+      type: STRING
+    - description: Ad Type
+      friendly_name: Ad Type
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Ad Type
+      name: ad_type
+      nullable: false
+      type: STRING
+    - description: Ad Media Name
+      friendly_name: Ad Media Name
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Ad Media Name
+      name: ad_media_name
+      nullable: false
+      type: STRING
+    description: ''
+    name: dim_promotion
+  - columns:
+    - description: store key
+      friendly_name: Store ID
+      is_enum: false
+      key_constraint: primary
+      labels:
+      - Store ID
+      name: store_key
+      nullable: false
+      type: INTEGER
+    - description: store number
+      friendly_name: Store Number
+      is_enum: false
+      key_constraint: unique
+      labels:
+      - Store Number
+      name: store_number
+      nullable: false
+      type: INTEGER
+    - description: store name
+      friendly_name: Store Name
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Store Name
+      name: store_name
+      nullable: false
+      type: STRING
+    - description: "store type can be of three types: \n1) Regular \n2) Factory Outlet\
+        \ \n3) Online (or Ecommerce)"
+      friendly_name: Store Type
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Store Type
+      name: store_type
+      nullable: false
+      type: STRING
+    - description: City where store is located
+      friendly_name: City
+      is_enum: false
+      key_constraint: null
+      labels:
+      - City
+      name: city
+      nullable: false
+      type: STRING
+      system_entity: '@sys.geo-city'
+    - description: State where store is located
+      friendly_name: Sate
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Sate
+      name: state
+      nullable: false
+      type: STRING
+      system_entity: '@sys.geo-state'
+    - description: Country where store is located
+      friendly_name: Country
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Country
+      name: country
+      nullable: false
+      type: STRING
+      system_entity: '@sys.geo-country'
+    - description: Region where store is located (East, West, North, Central...)
+      friendly_name: Region
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Region
+      name: region
+      nullable: false
+      type: STRING
+    - description: Zipcode
+      friendly_name: Zipcode
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Zipcode
+      name: zipcode
+      nullable: true
+      type: INTEGER
+      system_entity: '@sys.zip-code'
+    description: ''
+    name: dim_store
+  - columns:
+    - description: Order Id
+      friendly_name: Order ID
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Order ID
+      name: order_id
+      nullable: false
+      type: INTEGER
+    - description: number of items purchased
+      friendly_name: Quantity
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Quantity
+      name: quantity
+      nullable: false
+      type: INTEGER
+      system_entity: '@sys.cardinal'
+    - description: unit price
+      friendly_name: Unit Price
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Unit Price
+      name: unit_price
+      nullable: false
+      type: FLOAT
+    - description: unit cost
+      friendly_name: Unit Cost
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Unit Cost
+      name: unit_cost
+      nullable: false
+      type: FLOAT
+    - description: total sales ($)
+      friendly_name: Total Sales
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Total Sales
+      name: sales_value
+      nullable: false
+      type: FLOAT
+    - description: total cost ($)
+      friendly_name: Total Cost
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Total Cost
+      name: sales_cost
+      nullable: false
+      type: FLOAT
+    - description: margin = total sales - total cost
+      friendly_name: Margin
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Margin
+      name: margin
+      nullable: false
+      type: FLOAT
+    - description: time of sale/order
+      friendly_name: Time
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Time
+      name: sales_timestamp
+      nullable: false
+      type: TIMESTAMP
+    - description: Line item number. This is the unique key in the table. Each row
+        in the table lists a separate line item for each order/transaction made. For
+        example, if a customer buys 3 different products in a single order, then 3
+        different rows will be added to this table with the same order id.
+      friendly_name: Line Item Number
+      is_enum: false
+      key_constraint: primary
+      labels:
+      - Line Item Number
+      name: line_number
+      nullable: false
+      type: INTEGER
+    - description: Date key. This field should be used to join the table with the
+        date dimension. For example, if you are looking to calculate the sales generated
+        on a certain date, then join the fact_product_sales with dim_date table using
+        date_key field
+      friendly_name: Date ID
+      is_enum: false
+      key_constraint: foreign
+      labels:
+      - Date ID
+      name: date_key
+      nullable: false
+      type: INTEGER
+    - description: Customer key. This field should be used to join the table with
+        the customer dimension. For example, if you are looking to calculate the sales
+        generated by a specific customer, then join the fact_product_sales with dim_customer
+        table using customer_key field
+      friendly_name: Customer ID
+      is_enum: false
+      key_constraint: foreign
+      labels:
+      - Customer ID
+      name: customer_key
+      nullable: false
+      type: INTEGER
+    - description: product key. This field should be used to join the table with the
+        product dimension. For example, if you are looking to calculate the sales
+        by product category, then join the fact_product_sales with dim_productr table
+        using product_key field
+      friendly_name: Product ID
+      is_enum: false
+      key_constraint: foreign
+      labels:
+      - Product ID
+      name: product_key
+      nullable: false
+      type: INTEGER
+    - description: store key. This field should be used to join the table with the
+        store dimension. For example, if you are looking to calculate the sales for
+        a particular store or the region, then join the fact_product_sales with dim_store
+        table using store_key field
+      friendly_name: Store ID
+      is_enum: false
+      key_constraint: foreign
+      labels:
+      - Store ID
+      name: store_key
+      nullable: false
+      type: INTEGER
+    - description: promotion key. This field should be used to join the table with
+        the promotion dimension. For example, if you are looking to understand which
+        promotion is generating highest sales, then join the fact_product_sales with
+        dim_promotion table using promotion_key field
+      friendly_name: Promotion ID
+      is_enum: false
+      key_constraint: foreign
+      labels:
+      - Promotion ID
+      name: promotion_key
+      nullable: false
+      type: INTEGER
+    - description: Clearance Price
+      friendly_name: Clearance Price
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Clearance Price
+      name: clearance_pricing
+      nullable: false
+      type: BOOLEAN
+    - description: Clearance Price
+      friendly_name: Clearance Price
+      is_enum: false
+      key_constraint: null
+      labels:
+      - Returning Customer
+      name: returning_customer
+      nullable: false
+      type: BOOLEAN
+    description: ''
+    name: fact_product_sales
+updated: 2020-06-05
+version: '1.1'
