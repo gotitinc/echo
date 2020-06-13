@@ -1,0 +1,2394 @@
+{
+  "description": "Simplified InDiE file format",
+  "source_indie_file": "/Users/amolk/work/gotit/tutoruniverse/dialogflow_publisher/data/InDiE_0.3_Echo_20200612184151.json",
+  "custom_entities": {
+    "dim_customer.preferred_channel1": {
+      "index": 0,
+      "entity_type": "@gotit-0",
+      "table": "dim_customer",
+      "column": "preferred_channel1",
+      "dictionary": {
+        "online": [
+          "online"
+        ],
+        "store": [
+          "store"
+        ]
+      }
+    },
+    "dim_customer.interest1": {
+      "index": 1,
+      "entity_type": "@gotit-1",
+      "table": "dim_customer",
+      "column": "interest1",
+      "dictionary": {
+        "10GB plan": [
+          "10GB plan"
+        ],
+        "earphones": [
+          "earphones"
+        ],
+        "family plan": [
+          "family plan"
+        ],
+        "ipad": [
+          "ipad"
+        ],
+        "ipad pro": [
+          "ipad pro"
+        ],
+        "iphone 11": [
+          "iphone 11"
+        ],
+        "iphone 11 pro": [
+          "iphone 11 pro"
+        ],
+        "iphone 7": [
+          "iphone 7"
+        ],
+        "iphone 8": [
+          "iphone 8"
+        ],
+        "iphone XS": [
+          "iphone XS"
+        ],
+        "iphone cover": [
+          "iphone cover"
+        ],
+        "screen protector": [
+          "screen protector"
+        ],
+        "unlimited plan": [
+          "unlimited plan"
+        ]
+      }
+    },
+    "dim_customer.channel": {
+      "index": 2,
+      "entity_type": "@gotit-2",
+      "table": "dim_customer",
+      "column": "channel",
+      "dictionary": {
+        "Email": [
+          "Email"
+        ],
+        "SEM": [
+          "SEM"
+        ],
+        "SEO": [
+          "SEO"
+        ],
+        "SMS": [
+          "SMS"
+        ],
+        "direct": [
+          "direct"
+        ]
+      }
+    },
+    "dim_date.day_name": {
+      "index": 3,
+      "entity_type": "@gotit-3",
+      "table": "dim_date",
+      "column": "day_name",
+      "dictionary": {
+        "Friday": [
+          "Friday"
+        ],
+        "Monday": [
+          "Monday"
+        ],
+        "Saturday": [
+          "Saturday"
+        ],
+        "Sunday": [
+          "Sunday"
+        ],
+        "Thursday": [
+          "Thursday"
+        ],
+        "Tuesday": [
+          "Tuesday"
+        ],
+        "Wednesday": [
+          "Wednesday"
+        ]
+      }
+    },
+    "dim_date.month_name": {
+      "index": 4,
+      "entity_type": "@gotit-4",
+      "table": "dim_date",
+      "column": "month_name",
+      "dictionary": {
+        "April": [
+          "April"
+        ],
+        "August": [
+          "August"
+        ],
+        "December": [
+          "December"
+        ],
+        "February": [
+          "February"
+        ],
+        "January": [
+          "January"
+        ],
+        "July": [
+          "July"
+        ],
+        "June": [
+          "June"
+        ],
+        "March": [
+          "March"
+        ],
+        "May": [
+          "May"
+        ],
+        "November": [
+          "November"
+        ],
+        "October": [
+          "October"
+        ],
+        "September": [
+          "September"
+        ]
+      }
+    },
+    "dim_product.name": {
+      "index": 5,
+      "entity_type": "@gotit-5",
+      "table": "dim_product",
+      "column": "name",
+      "dictionary": {
+        "10GB plan": [
+          "10GB",
+          "10GB plan"
+        ],
+        "earphones": [
+          "earphones"
+        ],
+        "family plan": [
+          "family plan"
+        ],
+        "ipad": [
+          "iPads",
+          "ipad"
+        ],
+        "ipad pro": [
+          "ipad pro"
+        ],
+        "iphone 11": [
+          "iphone 11"
+        ],
+        "iphone 11 pro": [
+          "iphone 11 pro"
+        ],
+        "iphone 7": [
+          "iphone 7"
+        ],
+        "iphone 8": [
+          "iphone 8"
+        ],
+        "iphone XS": [
+          "iphone XS"
+        ],
+        "iphone cover": [
+          "iphone cover"
+        ],
+        "screen protector": [
+          "screen protector"
+        ],
+        "unlimited plan": [
+          "unlimited plan"
+        ]
+      }
+    },
+    "dim_product.description": {
+      "index": 6,
+      "entity_type": "@gotit-6",
+      "table": "dim_product",
+      "column": "description",
+      "dictionary": {
+        "10GB plan": [
+          "10GB plan"
+        ],
+        "earphones": [
+          "earphones"
+        ],
+        "family plan": [
+          "family plan"
+        ],
+        "ipad": [
+          "ipad"
+        ],
+        "ipad pro": [
+          "ipad pro"
+        ],
+        "iphone 11": [
+          "iphone 11"
+        ],
+        "iphone 11 pro": [
+          "iphone 11 pro"
+        ],
+        "iphone 7": [
+          "iphone 7"
+        ],
+        "iphone 8": [
+          "iphone 8"
+        ],
+        "iphone XS": [
+          "iphone XS"
+        ],
+        "iphone cover": [
+          "iphone cover"
+        ],
+        "screen protector": [
+          "screen protector"
+        ],
+        "unlimited plan": [
+          "unlimited plan"
+        ]
+      }
+    },
+    "dim_product.product_type": {
+      "index": 7,
+      "entity_type": "@gotit-7",
+      "table": "dim_product",
+      "column": "product_type",
+      "dictionary": {
+        "accessories": [
+          "accessories"
+        ],
+        "bundled plans": [
+          "bundled plans"
+        ],
+        "phone": [
+          "phone"
+        ],
+        "tablets": [
+          "tablets"
+        ]
+      }
+    },
+    "dim_product.product_category": {
+      "index": 8,
+      "entity_type": "@gotit-8",
+      "table": "dim_product",
+      "column": "product_category",
+      "dictionary": {
+        "devices": [
+          "devices"
+        ],
+        "internet": [
+          "internet"
+        ],
+        "voice plans": [
+          "voice plans"
+        ]
+      }
+    },
+    "dim_product.color": {
+      "index": 9,
+      "entity_type": "@gotit-9",
+      "table": "dim_product",
+      "column": "color",
+      "dictionary": {
+        "black": [
+          "black"
+        ],
+        "gold": [
+          "gold"
+        ],
+        "red": [
+          "red"
+        ],
+        "silver": [
+          "silver"
+        ],
+        "white": [
+          "white"
+        ]
+      }
+    },
+    "dim_promotion.promotion_name": {
+      "index": 10,
+      "entity_type": "@gotit-10",
+      "table": "dim_promotion",
+      "column": "promotion_name",
+      "dictionary": {
+        "Black Friday": [
+          "Black Friday"
+        ],
+        "Christmas": [
+          "Christmas"
+        ],
+        "July 4": [
+          "July 4"
+        ],
+        "Semi-annual": [
+          "Semi-annual"
+        ],
+        "Valentine": [
+          "Valentine"
+        ],
+        "Weekend": [
+          "Weekend"
+        ]
+      }
+    },
+    "dim_promotion.promotion_type": {
+      "index": 11,
+      "entity_type": "@gotit-11",
+      "table": "dim_promotion",
+      "column": "promotion_type",
+      "dictionary": {
+        "buy_one_get_one": [
+          "buy_one_get_one"
+        ],
+        "discount": [
+          "discount"
+        ],
+        "multiples": [
+          "multiples"
+        ]
+      }
+    },
+    "dim_promotion.ad_type": {
+      "index": 12,
+      "entity_type": "@gotit-12",
+      "table": "dim_promotion",
+      "column": "ad_type",
+      "dictionary": {
+        "billboard": [
+          "billboard"
+        ],
+        "newspaper": [
+          "newspaper"
+        ],
+        "pamphlet": [
+          "pamphlet"
+        ],
+        "radio": [
+          "radio"
+        ],
+        "tv": [
+          "tv"
+        ],
+        "web": [
+          "web"
+        ]
+      }
+    },
+    "dim_promotion.ad_media_name": {
+      "index": 13,
+      "entity_type": "@gotit-13",
+      "table": "dim_promotion",
+      "column": "ad_media_name",
+      "dictionary": {
+        "ABC": [
+          "ABC"
+        ],
+        "CBS": [
+          "CBS"
+        ],
+        "Facebook": [
+          "Facebook"
+        ],
+        "Google ads": [
+          "Google ads"
+        ],
+        "HBO": [
+          "HBO"
+        ],
+        "LA time": [
+          "LA time"
+        ],
+        "NY times": [
+          "NY times"
+        ],
+        "Radio 92.3": [
+          "Radio 92.3"
+        ]
+      }
+    },
+    "dim_store.store_name": {
+      "index": 14,
+      "entity_type": "@gotit-14",
+      "table": "dim_store",
+      "column": "store_name",
+      "dictionary": {
+        "Atlanta": [
+          "Atlanta"
+        ],
+        "Boston": [
+          "Boston"
+        ],
+        "Cambridge": [
+          "Cambridge"
+        ],
+        "Chicago": [
+          "Chicago"
+        ],
+        "Kansas": [
+          "Kansas"
+        ],
+        "Las Vegas": [
+          "Las Vegas"
+        ],
+        "Los Angeles": [
+          "Los Angeles"
+        ],
+        "Miami": [
+          "Miami"
+        ],
+        "New York City": [
+          "New York City"
+        ],
+        "San Francisco": [
+          "San Francisco"
+        ],
+        "Seattle": [
+          "Seattle"
+        ]
+      }
+    },
+    "dim_store.store_type": {
+      "index": 15,
+      "entity_type": "@gotit-15",
+      "table": "dim_store",
+      "column": "store_type",
+      "dictionary": {
+        "online": [
+          "e-commerce",
+          "online"
+        ],
+        "physical": [
+          "physical",
+          "store"
+        ]
+      }
+    },
+    "dim_store.region": {
+      "index": 16,
+      "entity_type": "@gotit-16",
+      "table": "dim_store",
+      "column": "region",
+      "dictionary": {
+        "Midwest": [
+          "Midwest"
+        ],
+        "Northeast": [
+          "Northeast"
+        ],
+        "South": [
+          "South"
+        ],
+        "West": [
+          "West"
+        ]
+      }
+    }
+  },
+  "intents": [
+    {
+      "id": "atbijsoy",
+      "utterances": [
+        {
+          "parts": [
+            {
+              "text": "Get"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "me"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "all"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "from"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Washington",
+              "alias": "slot-8",
+              "entity_type": "@sys.geo-state"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "state"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Which"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "were"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "placed"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "between 01 May,2020 and 15 May,2020",
+              "alias": "slot-6-7",
+              "entity_type": "@sys.date-time"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Which"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "from"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "customers"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "Massachusetts",
+              "alias": "slot-8",
+              "entity_type": "@sys.geo-state"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "found"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "us"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "via"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "SEM",
+              "alias": "slot-9",
+              "entity_type": "@gotit-2"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in 2020",
+              "alias": "slot-6-7",
+              "entity_type": "@sys.date-time"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "so"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "far"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Get"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "me"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "our"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "customers"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "that"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "found"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "us"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "from"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "SEO",
+              "alias": "slot-9",
+              "entity_type": "@gotit-2"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in 2019",
+              "alias": "slot-6-7",
+              "entity_type": "@sys.date-time"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Get"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "me"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "from"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "California",
+              "alias": "slot-8",
+              "entity_type": "@sys.geo-state"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in Jan 2020",
+              "alias": "slot-6-7",
+              "entity_type": "@sys.date-time"
+            },
+            {
+              "text": " "
+            }
+          ]
+        }
+      ],
+      "followup_utterances": [
+        {
+          "parts": [
+            {
+              "text": "Online",
+              "alias": "slot-5",
+              "entity_type": "@gotit-15"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "only"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "placed"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "store",
+              "alias": "slot-5",
+              "entity_type": "@gotit-15"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Online",
+              "alias": "slot-5",
+              "entity_type": "@gotit-15"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "only"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Physical"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "store"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "online",
+              "alias": "slot-5",
+              "entity_type": "@gotit-15"
+            },
+            {
+              "text": " "
+            }
+          ]
+        }
+      ],
+      "response_template": "Results: $result-slot-1",
+      "parameters": [
+        {
+          "id": "slot-8",
+          "mandatory": false,
+          "entity_type": "@sys.geo-state",
+          "friendly_name": "State"
+        },
+        {
+          "id": "slot-5",
+          "mandatory": true,
+          "entity_type": "@gotit-15",
+          "friendly_name": "Store Type"
+        },
+        {
+          "id": "slot-6-7",
+          "mandatory": false,
+          "entity_type": "@sys.date-time",
+          "friendly_name": "Date"
+        },
+        {
+          "id": "slot-9",
+          "mandatory": false,
+          "entity_type": "@gotit-2",
+          "friendly_name": "Channel"
+        }
+      ]
+    },
+    {
+      "id": "qpydahus",
+      "utterances": [
+        {
+          "parts": [
+            {
+              "text": "How"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "many"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "customers"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "got"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "their"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "gold",
+              "alias": "slot-3",
+              "entity_type": "@gotit-9"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "ipad pro",
+              "alias": "slot-4",
+              "entity_type": "@gotit-5"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "'s"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "online",
+              "alias": "slot-5",
+              "entity_type": "@gotit-15"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "What"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "is"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "count"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "customers"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "who"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "purchased"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "iphone 7",
+              "alias": "slot-4",
+              "entity_type": "@gotit-5"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "'s"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "store",
+              "alias": "slot-5",
+              "entity_type": "@gotit-15"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "black",
+              "alias": "slot-3",
+              "entity_type": "@gotit-9"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Get"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "me"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "number"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "customers"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "that"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "made"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "and"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "e-commerce",
+              "alias": "slot-5",
+              "entity_type": "@gotit-15"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "purchase"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "for"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "red",
+              "alias": "slot-3",
+              "entity_type": "@gotit-9"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "iPhone 8s",
+              "alias": "slot-4",
+              "entity_type": "@gotit-5"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "How"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "many"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "customers"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "bought"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "silver",
+              "alias": "slot-3",
+              "entity_type": "@gotit-9"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "iPads",
+              "alias": "slot-4",
+              "entity_type": "@gotit-5"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "store",
+              "alias": "slot-5",
+              "entity_type": "@gotit-15"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Number"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "customers"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "who"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "purchased"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "iPhone XS",
+              "alias": "slot-4",
+              "entity_type": "@gotit-5"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "'s"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "online",
+              "alias": "slot-5",
+              "entity_type": "@gotit-15"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "white",
+              "alias": "slot-3",
+              "entity_type": "@gotit-9"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        }
+      ],
+      "followup_utterances": [],
+      "response_template": "Results: $result-slot-1",
+      "parameters": [
+        {
+          "id": "slot-3",
+          "mandatory": true,
+          "entity_type": "@gotit-9",
+          "friendly_name": "Color"
+        },
+        {
+          "id": "slot-4",
+          "mandatory": true,
+          "entity_type": "@gotit-5",
+          "friendly_name": "Product Name"
+        },
+        {
+          "id": "slot-5",
+          "mandatory": true,
+          "entity_type": "@gotit-15",
+          "friendly_name": "Store Type"
+        }
+      ]
+    },
+    {
+      "id": "asimzkwh",
+      "utterances": [
+        {
+          "parts": [
+            {
+              "text": "How"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "many"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "have"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "we"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "gotten"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "from January 1, 2020",
+              "alias": "slot-2",
+              "entity_type": "@sys.date-time"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "What"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "is"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "total"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "count"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "from"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "on"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "or"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "after 01 Jun,2020",
+              "alias": "slot-2",
+              "entity_type": "@sys.date-time"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "from May 1 2019",
+              "alias": "slot-2",
+              "entity_type": "@sys.date-time"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": ","
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "what"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "is"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "number"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "we"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "have"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "received"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Get"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "me"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "number"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "from"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "on"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "or"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "after 01 Jun,2020",
+              "alias": "slot-2",
+              "entity_type": "@sys.date-time"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Total"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "number"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "orders"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "on"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "or"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "after Feb 15, 2020",
+              "alias": "slot-2",
+              "entity_type": "@sys.date-time"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        }
+      ],
+      "followup_utterances": [],
+      "response_template": "Results: $result-slot-1",
+      "parameters": [
+        {
+          "id": "slot-2",
+          "mandatory": true,
+          "entity_type": "@sys.date-time",
+          "friendly_name": "Date"
+        }
+      ]
+    },
+    {
+      "id": "xcujiltg",
+      "utterances": [
+        {
+          "parts": [
+            {
+              "text": "What"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "products"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "cost"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "more"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "than"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "over $100",
+              "alias": "slot-1",
+              "entity_type": "@sys.number"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Which"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "our"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "products"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "retail"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "for"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "more"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "than"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "more than $50",
+              "alias": "slot-1",
+              "entity_type": "@sys.number"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Get"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "me"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "a"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "list"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "our"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "products"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "that"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "we"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "sell"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "for"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "more"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "than"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "over $80",
+              "alias": "slot-1",
+              "entity_type": "@sys.number"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Find"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "out"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "which"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "products"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "are"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "sold"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "at"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "more"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "than"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "more"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "than"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "a"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "$"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "price"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "point"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Products"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "that"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "retail"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "for"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "more"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "than"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "over $25",
+              "alias": "slot-1",
+              "entity_type": "@sys.number"
+            },
+            {
+              "text": " "
+            }
+          ]
+        }
+      ],
+      "followup_utterances": [],
+      "response_template": "Results: $result-slot-1, $result-slot-2",
+      "parameters": [
+        {
+          "id": "slot-1",
+          "mandatory": true,
+          "entity_type": "@sys.number",
+          "friendly_name": "Unit Cost"
+        }
+      ]
+    },
+    {
+      "id": "bovjrswe",
+      "utterances": [
+        {
+          "parts": [
+            {
+              "text": "\ufeffHow"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "much"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "have"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "we"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "made"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "in"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "sales"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "What"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "are"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "our"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "total"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "sales"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "?"
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Get"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "me"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "total"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "for"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "all"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "sales"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Find"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "me"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "the"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "sum"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "of"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "all"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "sales"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        },
+        {
+          "parts": [
+            {
+              "text": "Our"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "total"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "sales"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "to"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "date"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "."
+            },
+            {
+              "text": " "
+            }
+          ]
+        }
+      ],
+      "followup_utterances": [],
+      "response_template": "Results: $result-slot-1",
+      "parameters": []
+    }
+  ]
+}
