@@ -1,0 +1,35 @@
+﻿How much have we made in sales?,SELECT SUM(fact_product_sales.sales_value) as sales FROM fact_product_sales
+What are our total sales?,SELECT SUM(fact_product_sales.sales_value) as sales FROM fact_product_sales
+Get me the total for all sales.,SELECT SUM(fact_product_sales.sales_value) as sales FROM fact_product_sales
+Find me the sum of all sales.,SELECT SUM(fact_product_sales.sales_value) as sales FROM fact_product_sales
+Our total sales to date.,SELECT SUM(fact_product_sales.sales_value) as sales FROM fact_product_sales
+What products cost over $100?,"SELECT dim_product.name, dim_product.description FROM dim_product WHERE dim_product.unit_cost > 100"
+Which of our products retail for more than $50?,"SELECT dim_product.name, dim_product.description FROM dim_product WHERE dim_product.unit_cost > 50"
+Get me a list of our products that we sell for over $80.,"SELECT dim_product.name, dim_product.description FROM dim_product WHERE dim_product.unit_cost > 80"
+Find out which products are sold at more than a $75 price point.,"SELECT dim_product.name, dim_product.description FROM dim_product WHERE dim_product.unit_cost > 75"
+Products that retail for over $25,"SELECT dim_product.name, dim_product.description FROM dim_product WHERE dim_product.unit_cost > 25"
+"How many orders have we gotten since January 1, 2020?",SELECT COUNT(DISTINCT fact_product_sales.order_id) as orders FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key WHERE dim_date.date >= '2020-01-01'
+What is the total count of orders from on or after 6/1/2020?,SELECT COUNT(DISTINCT fact_product_sales.order_id) as orders FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key WHERE dim_date.date >= '2020-06-01'
+"Since May 1 2019, what is the number of orders we have recieved?",SELECT COUNT(DISTINCT fact_product_sales.order_id) as orders FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key WHERE dim_date.date >= '2019-05-01'
+Get me the number of orders from on or after 06/01/2020,SELECT COUNT(DISTINCT fact_product_sales.order_id) as orders FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key WHERE dim_date.date >= '2020-06-01'
+"Total number of orders on or after Feb 15, 2020.",SELECT COUNT(DISTINCT fact_product_sales.order_id) as orders FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key WHERE dim_date.date >= '2020-02-15'
+How many customers got their gold ipad pro's online?,SELECT COUNT(DISTINCT fact_product_sales.customer_key) as customers FROM fact_product_sales JOIN dim_product on fact_product_sales.product_key = dim_product.product_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_product.color = 'gold' AND dim_product.name = 'ipad pro' AND dim_store.store_type = 'online'
+What is the count of customers who purchased iphone 7's in store in black.,SELECT COUNT(DISTINCT fact_product_sales.customer_key) as customers FROM fact_product_sales JOIN dim_product on fact_product_sales.product_key = dim_product.product_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_product.color = 'black' AND dim_product.name = 'iphone 7' AND dim_store.store_type = 'physical'
+Get me the number of customers that made and ecommerce purchase for red iphone 8s.,SELECT COUNT(DISTINCT fact_product_sales.customer_key) as customers FROM fact_product_sales JOIN dim_product on fact_product_sales.product_key = dim_product.product_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_product.color = 'red' AND dim_product.name = 'iphone 8' AND dim_store.store_type = 'online'
+How many customers bought silver iPads in store?,SELECT COUNT(DISTINCT fact_product_sales.customer_key) as customers FROM fact_product_sales JOIN dim_product on fact_product_sales.product_key = dim_product.product_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_product.color = 'silver' AND dim_product.name = 'ipad' AND dim_store.store_type = 'physical'
+Number of customers who purchased iPhone XS's online in white.,SELECT COUNT(DISTINCT fact_product_sales.customer_key) as customers FROM fact_product_sales JOIN dim_product on fact_product_sales.product_key = dim_product.product_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_product.color = 'white' AND dim_product.name = 'iphone XS' AND dim_store.store_type = 'online'
+"C - Get me the orders from California in Jan 2020
+CS - Would you like online or in-store orders?
+C - online",SELECT fact_product_sales.order_id FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key JOIN dim_customer on fact_product_sales.customer_key = dim_customer.customer_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_date.date BETWEEN '2020-01-01' AND '2020-01-31' AND dim_customer.state = 'CA' AND dim_store.store_type = 'online'
+"C - Which orders from customers in Massachusetts found us via SEM in 2020 so far?
+CS - For online or in-store orders?
+C - Online orders only.",SELECT fact_product_sales.order_id FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key JOIN dim_customer on fact_product_sales.customer_key = dim_customer.customer_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_date.date BETWEEN '2020-01-01' AND '2020-12-31' AND dim_customer.state = 'MA' AND dim_customer.channel = 'SEM' AND dim_store.store_type = 'online'
+"C - Get me the orders of our customers that found us from SEO in 2019?
+CS - Would you link online or physical store orders?
+C - Physical store orders.",SELECT fact_product_sales.order_id FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key JOIN dim_customer on fact_product_sales.customer_key = dim_customer.customer_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_date.date BETWEEN '2019-01-01' AND '2019-12-31' AND dim_customer.channel = 'SEO ' AND dim_store.store_type = 'physical'
+"C - Get me all of the orders from Washington state.
+CS - Online or in-store orders?
+C - Online orders only.",SELECT fact_product_sales.order_id FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key JOIN dim_customer on fact_product_sales.customer_key = dim_customer.customer_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_customer.state = 'WA' AND dim_store.store_type = 'online'
+"C - Which orders were placed between 5/1/2020 and 5/15/2020?
+CS - Online orders or in-store orders?
+C - Orders placed in the store.",SELECT fact_product_sales.order_id FROM fact_product_sales JOIN dim_date on fact_product_sales.date_key = dim_date.date_key JOIN dim_customer on fact_product_sales.customer_key = dim_customer.customer_key JOIN dim_store on fact_product_sales.store_key = dim_store.store_key WHERE dim_date.date BETWEEN '2020-05-01' AND '2020-05-15' AND dim_store.store_type = 'physical'
