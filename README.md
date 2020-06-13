@@ -20,5 +20,3 @@ This repo contains code and assets for Phase 1 of ECHO
     - send response back to DialogFlow in DialogFlow specific format
   - A reference implementation for DialogFlow publisher (code)
 [python jupyter notebook] publisher module that configures intents, custom entities, etc in a DialogFlow agent using DialogFlow APIs
-
-
