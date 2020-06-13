@@ -1,6 +1,6 @@
 from flask import jsonify, make_response
 import json
-from pydialogflow_fulfillment import DialogflowRequest, DialogflowResponse, OutputContexts
+from pydialogflow_fulfillment import DialogflowRequest, DialogflowResponse, OutputContexts, Table, TableCell
 import os
 import requests
 
@@ -68,17 +68,26 @@ class DialogFlowFulfillmentService:
         print('calling InDiE fulfillment: ', payload)
 
         indie_fulfillment_service_url = os.environ['INDIE_FULFILLMENT_SERVICE_URL']
-        r = requests.post(indie_fulfillment_service_url, json=payload, verify=False)
-        if r.ok:
-            r = r.json()
+        res = requests.post(indie_fulfillment_service_url, json=payload, verify=False)
+        if res.ok:
+            res = res.json()
 
-            if 'response_text' in r:
-                response_text = r['response_text']
-                dialogflow_response = DialogflowResponse(response_text)
+            if 'fulfillment_message' in res:
+                fulfillment_message = res['fulfillment_message']
+                print("Received fulfillment message", fulfillment_message)
+
+                dialogflow_response = DialogflowResponse(fulfillment_message)
+                if 'table' in res:
+                    table_response = Table(
+                        rows=[TableCell(row) for row in res['table']],
+                        columns=['col']*len(res['table'][0])
+                    )
+                    dialogflow_response.rich_response['items'] = []
+                    dialogflow_response.add(table_response)
                 return json.loads(dialogflow_response.get_final_response())
             else:
-                if 'error' in r:
-                    return r
+                if 'error' in res:
+                    return res
 
         return {'error': "Failed to receive response from InDiE fulfillment service"}
 
