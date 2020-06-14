@@ -35,14 +35,14 @@
       "intent_template": "SELECT SUM(fact_product_sales.sales_value) AS sales FROM fact_product_sales",
       "query": "SELECT SUM(fact_product_sales.sales_value) as sales FROM fact_product_sales",
       "slots": [],
-      "utterance": "\ufeffHow much have we made in sales?",
+      "utterance": "How much have we made in sales?",
       "word_slot_mapping": [
         {
           "py/tuple": [
-            "\ufeffHow",
+            "How",
             null,
             null,
-            "\ufeffHow"
+            "How"
           ]
         },
         {
