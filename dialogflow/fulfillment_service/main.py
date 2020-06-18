@@ -1,6 +1,6 @@
 from flask import jsonify, make_response
 import json
-from pydialogflow_fulfillment import DialogflowRequest, DialogflowResponse, OutputContexts, Table, TableCell
+from pydialogflow_fulfillment import DialogflowRequest, DialogflowResponse, OutputContexts, SimpleResponse, Table, TableCell
 import os
 import requests
 
@@ -49,7 +49,7 @@ class DialogFlowFulfillmentService:
         parameters = dialogflow_request.get_parameters()
         print("parameters", parameters)
         if not parameters:
-            return {'error': "No parameters found in dialogflow request"}
+            parameters = {}
 
         print("---------------------")
         print("parameters", parameters)
@@ -77,12 +77,13 @@ class DialogFlowFulfillmentService:
                 print("Received fulfillment message", fulfillment_message)
 
                 dialogflow_response = DialogflowResponse(fulfillment_message)
+                dialogflow_response.add(SimpleResponse(fulfillment_message, fulfillment_message))
                 if 'table' in res:
                     table_response = Table(
                         rows=[TableCell(row) for row in res['table']],
-                        columns=['col']*len(res['table'][0])
+                        columns=['col']*len(res['table'][0]),
+                        add_dividers=True
                     )
-                    dialogflow_response.rich_response['items'] = []
                     dialogflow_response.add(table_response)
                 return json.loads(dialogflow_response.get_final_response())
             else:
